@@ -1,20 +1,22 @@
+https://github.com/ksuzumur-test1/manifest-skeleton
+
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name:  ${{ values.app_name }}
-  description: Hello Worldサービスです
+  name:  manifest-skeleton
+  description: manifest-skeleton
   labels:
-    app: ${{ values.app_name }}
+    app: manifest-skeleton
   links:
-    - url: https://${{ values.git_host_url }}/${{ values.git_owner_name }}/${{ values.git_repo_name }}
+    - url: https://github.com/ksuzumur-test1/manifest-skeleton
       title: App Repository
       icon: github
   annotations:
-    backstage.io/kubernetes-label-selector: 'app=${{ values.app_name }}'
-    backstage.io/kubernetes-namespace: ${{ values.app_name }}
-    argocd/app-selector: app.kubernetes.io/instance=${{ values.app_name }}-init
-    backstage.io/techdocs-ref: url:https://${{ values.git_host_url }}/${{ values.git_owner_name }}/${{ values.git_repo_name }}
+    backstage.io/kubernetes-label-selector: 'app=manifest-skeleton'
+    backstage.io/kubernetes-namespace: manifest-skeleton
+    argocd/app-selector: app.kubernetes.io/instance=manifest-skeleton-init
+    backstage.io/techdocs-ref: url:https://github.com/ksuzumur-test1/manifest-skeleton
 spec:
   type: website
-  owner: ${{ values.owner }}
+  owner: user:default/ksuzumur
   lifecycle: production

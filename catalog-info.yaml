@@ -1,5 +1,3 @@
-https://github.com/ksuzumur-test1/manifest-skeleton
-
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
